@@ -109,18 +109,18 @@ Higher revenue and user traction correlate with successful outcomes.
 3. Place the dataset in a `/data` folder
 
 4. Software Setup (Required libraries):
-    - pandas
-    - numpy
-    - matplotlib
-    - scikit-learn
-    - shap
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- shap
 
-    Install all dependencies (copy paste):
-    - install -r requirements.txt
+Install all dependencies (copy paste):
+- install -r requirements.txt
 
 5. Run notebooks in order:
-    - 1_data_eda.ipynb → Exploratory Data Analysis
-    - 2_data_visualizations.ipynb → Visualizations
-    - 3_data_preprocessing.ipynb → Data cleaning and preprocessing
-    - 4_data_models.ipynb → Model training
-    - 5_data_modelevaluations.ipynb → Model evaluation
+- 1_data_eda.ipynb → Exploratory Data Analysis
+- 2_data_visualizations.ipynb → Visualizations
+- 3_data_preprocessing.ipynb → Data cleaning and preprocessing
+- 4_data_models.ipynb → Model training
+- 5_data_modelevaluations.ipynb → Model evaluation
