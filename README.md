@@ -65,7 +65,6 @@ Key observation: startups with higher revenue and product traction users are mor
 - Preprocessing steps can be found in notebook 3
 
 ## Training:
-=======
 ---
 
 ## Overview
