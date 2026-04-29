@@ -32,4 +32,36 @@ Key observation: startups with higher revenue and product traction users are mor
 ### Problem Formulation
 - The problem defined was to learn what features contributed to a startup's outcome
 
-- 
+### Performance Comparison
+
+
+
+### Conclusions
+
+
+### Future Work
+
+## How to reproduce results
+
+
+
+## Overview of Files in Repository
+- Notebooks folder
+  - 1_data_eda.ipynb
+  - 2_data_visualizations.ipynb
+  - 3_data_preprocessing.ipynb
+  - 4_data_models.ipynb
+  - 5_data_modelevaluations.ipynb
+
+
+ ## Software Setup
+ - Libraries Used (imported):
+   - Pandas
+   - Numpy
+   - Matplotlib
+
+## Data Source
+- Link: https://www.kaggle.com/datasets/dhrubangtalukdar/startup-funding-and-outcome-dataset
+- Preprocessing steps can be found in notebook 3
+
+## Training:
