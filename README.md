@@ -86,7 +86,7 @@ Higher revenue and user traction correlate with successful outcomes.
 
 ### Conclusions
 - Moderate predictability of startup outcomes
-- Similar model performance → limited non-linear gain
+- Similar model performance
 - IPO hardest due to imbalance
 - Financial features are most important
 
@@ -94,7 +94,7 @@ Higher revenue and user traction correlate with successful outcomes.
 
 ### Future Work
 - Try XGBoost / Gradient Boosting
-- Handle class imbalance (SMOTE, weights)
+- Handle class imbalance
 - Improve feature engineering
 - Add external economic data
 
