@@ -116,8 +116,8 @@ Higher revenue and user traction correlate with successful outcomes.
 - scikit-learn
 - shap
 
-Install all dependencies:
-- ```bash pip install -r requirements.txt
+Install all dependencies (copy paste):
+- install -r requirements.txt
 
 5. Run notebooks in order:
 - 1_data_eda.ipynb → Exploratory Data Analysis
