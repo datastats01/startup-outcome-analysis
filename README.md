@@ -117,25 +117,12 @@ Higher revenue and user traction correlate with successful outcomes.
 - shap
 
 Install all dependencies:
-- ```bash
+```bash
 - pip install -r requirements.txt
 
 5. Run notebooks in order:
-- 1_data_eda.ipynb
-- 2_data_visualizations.ipynb
-- 3_data_preprocessing.ipynb
-- 4_data_models.ipynb
-- 5_data_modelevaluations.ipynb
-
-Overview of Files in Repository
 - 1_data_eda.ipynb → Exploratory Data Analysis
 - 2_data_visualizations.ipynb → Visualizations
 - 3_data_preprocessing.ipynb → Data cleaning and preprocessing
 - 4_data_models.ipynb → Model training
 - 5_data_modelevaluations.ipynb → Model evaluation
-
-Dataset source:
-https://www.kaggle.com/datasets/dhrubangtalukdar/startup-funding-and-outcome-dataset
-
-Preprocessing details:
-- See 3_data_preprocessing.ipynb
