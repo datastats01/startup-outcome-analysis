@@ -117,8 +117,7 @@ Higher revenue and user traction correlate with successful outcomes.
 - shap
 
 Install all dependencies:
-```bash
-- pip install -r requirements.txt
+- ```bash pip install -r requirements.txt
 
 5. Run notebooks in order:
 - 1_data_eda.ipynb → Exploratory Data Analysis
