@@ -57,8 +57,6 @@ Acquisition and IPO have fewer instances, with IPO being the least represented o
     | Acquisition | 13,141 |
     | IPO         | 2,952  |
 
-**Key insight:** Startups with higher revenue and higher user traction are more likely to succeed.
-
 ---
 ### Problem Setup  
 This is a multi-class classification problem.
@@ -107,6 +105,7 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 <figcaption> </figcaption>
 </figure>
 
+**Key insights:** 
 - Revenue is the most important feature, meaning startups with higher revenue strongly influence predictions.
 - Product traction is the second most important feature, showing user growth matters a lot.
 - Features like founder background and investor type have low importance, meaning they do not strongly affect predictions.
