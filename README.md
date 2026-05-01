@@ -58,6 +58,14 @@ Acquisition and IPO have fewer instances, with IPO being the least represented o
     | IPO         | 2,952  |
 
 ---
+
+### Preprocessing  
+- Checked for missing values and duplicate records (none found)  
+- Converted categorical features into numbers  
+- Scaled numerical features  
+- Split data into training and testing sets
+  
+---
 ### Problem Setup  
 This is a multi-class classification problem.
 
@@ -70,15 +78,7 @@ This is a multi-class classification problem.
 
 **Settings:**
 - Logistic Regression: `max_iter=5000`  
-- Random Forest: `n_estimators=200`  
-
----
-
-### Preprocessing  
-- Checked for missing values and duplicate records (none found)  
-- Converted categorical features into numbers  
-- Scaled numerical features  
-- Split data into training and testing sets  
+- Random Forest: `n_estimators=200`   
 
 ---
 
