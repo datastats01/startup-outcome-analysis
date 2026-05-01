@@ -6,7 +6,7 @@ This project predicts startup outcomes (Failure, Acquisition, or IPO) using Logi
 ---
 
 ## Overview  
-This project uses machine learning to predict whether a startup will fail, get acquired, or go public (IPO). The dataset includes information such as funding, revenue, team size, market size, and other business-related features. This is treated as a multi-class classification problem. Two models are used: Logistic Regression as a simple baseline model and Random Forest as a more advanced model. Both models achieve around 74% accuracy. The results show that financial features like revenue and user traction are the most important for prediction, while predicting IPOs is difficult because there are very few IPO examples in the dataset.
+This project predicts whether a startup will fail, get acquired, or go public (IPO). It uses a dataset with features such as funding, revenue, team size, and market size, treated as a multi-class classification problem. Both Logistic Regression and Random Forest models were trained, achieving around 74% accuracy. Financial features like revenue and product traction play a major role in the predictions, while predicting IPOs is more challenging due to class imbalance.
 
 ---
 
