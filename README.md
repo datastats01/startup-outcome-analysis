@@ -30,7 +30,7 @@ This project uses machine learning to predict whether a startup will fail, get a
 ---
 
 ### Data Exploration and Visualization  
-- Plotted distributions of numerical features
+- **Plotted distributions of numerical features**
     - IPO startups have the highest average funding rounds (3.00), founder experience (15.54 years), team size (172.09), and revenue (2.12M USD).
     - Acquisition startups have moderate values for funding rounds (2.35), founder experience (13.53 years), and team size (159.24).
     - Failure startups have the lowest funding rounds (1.70), founder experience (10.75 years), team size (143.46), and revenue (536K USD).
@@ -42,7 +42,7 @@ This project uses machine learning to predict whether a startup will fail, get a
 <figcaption> </figcaption>
 </figure>
 
-- Compared categorical features across startup outcomes
+- **Compared categorical features across startup outcomes**
   - Climate has the highest number of IPO startups (310), followed by Health (303), with AI having the lowest count in IPO (260).
   - Tier 2 VCs invest in the most startups across all outcomes, while angel investors have the lowest involvement in IPO startups (553).
   - First-time founders have the highest counts for Failure and Acquisition startups, while academic founders have the lowest representation in IPO startups (419).
@@ -54,12 +54,17 @@ This project uses machine learning to predict whether a startup will fail, get a
 <figcaption> </figcaption>
 </figure>
 
-- Checked class imbalance in the target variable
-| **Outcome**  | **Count** |
-|--------------|----------:|
-| Failure      | 22,145    |
-| Acquisition  | 13,141    |
-| IPO          | 2,952     |
+- **Checked class imbalance in the target variable**
+The Outcome variable is imbalanced, with more instances of Failure startups than Acquisition or IPO.
+The Failure class has the highest count, indicating most startups in the dataset ended in failure.
+Acquisition and IPO have fewer instances, with IPO being the least represented outcome.
+
+
+| Outcome     | Count |
+|-------------|-------|
+| Failure     | 22,145 |
+| Acquisition | 13,141 |
+| IPO         | 2,952  |
 
 **Key insight:** Startups with higher revenue and higher user traction are more likely to succeed.
 
