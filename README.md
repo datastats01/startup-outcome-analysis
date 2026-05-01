@@ -108,15 +108,12 @@ Higher revenue and user traction correlate with successful outcomes.
 
 3. Place the dataset in a `/data` folder
 
-4. Software Setup (Required libraries):
+4. Software Setup (Required libraries to be installed):
 - pandas
 - numpy
 - matplotlib
 - scikit-learn
 - shap
-
-Install all dependencies (copy paste):
-- install -r requirements.txt
 
 5. Run notebooks in order:
 - 1_data_eda.ipynb → Exploratory Data Analysis
