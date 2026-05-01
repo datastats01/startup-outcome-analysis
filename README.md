@@ -22,8 +22,7 @@ This project uses machine learning to predict whether a startup will fail, get a
 ---
 
 ### Preprocessing  
-- Removed duplicate rows  
-- Checked for missing values (none found)  
+- Checked for missing values and duplicate records (none found)  
 - Converted categorical features into numbers  
 - Scaled numerical features  
 - Split data into training and testing sets  
