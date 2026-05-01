@@ -12,7 +12,7 @@ This project uses machine learning to predict whether a startup will fail, get a
 
 ## Summary of Work Done
 
-### Data  
+### Data Exploration
 - **Type:** Tabular dataset (CSV file)  
 - **Features:** Funding rounds, revenue (millions), team size, market size (billions), sector, investor type, founder background, founder experience (years), burn rate (millions), product traction users, outcome
 - **Target:** Startup outcome (Failure, Acquisition, IPO)  
@@ -21,15 +21,7 @@ This project uses machine learning to predict whether a startup will fail, get a
 
 ---
 
-### Preprocessing  
-- Checked for missing values and duplicate records (none found)  
-- Converted categorical features into numbers  
-- Scaled numerical features  
-- Split data into training and testing sets  
-
----
-
-### Data Exploration and Visualization  
+### Data Visualization  
 - **Plotted distributions of numerical features**
     - IPO startups have the highest average funding rounds (3.00), founder experience (15.54 years), team size (172.09), and revenue (2.12M USD).
     - Acquisition startups have moderate values for funding rounds (2.35), founder experience (13.53 years), and team size (159.24).
@@ -69,7 +61,6 @@ Acquisition and IPO have fewer instances, with IPO being the least represented o
 **Key insight:** Startups with higher revenue and higher user traction are more likely to succeed.
 
 ---
-
 ### Problem Setup  
 This is a multi-class classification problem.
 
@@ -83,6 +74,14 @@ This is a multi-class classification problem.
 **Settings:**
 - Logistic Regression: `max_iter=5000`  
 - Random Forest: `n_estimators=200`  
+
+---
+
+### Preprocessing  
+- Checked for missing values and duplicate records (none found)  
+- Converted categorical features into numbers  
+- Scaled numerical features  
+- Split data into training and testing sets  
 
 ---
 
