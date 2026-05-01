@@ -1,123 +1,111 @@
 # Startup Outcome Prediction using Machine Learning
 
-## One Sentence Summary
-Predicts startup outcomes (Failure, Acquisition, IPO) using Logistic Regression and Random Forest on a Kaggle dataset.
+## One-Sentence Summary  
+This project predicts startup outcomes (Failure, Acquisition, or IPO) using Logistic Regression and Random Forest models on a Kaggle dataset.
 
 ---
 
-## Overview
-This project predicts startup outcomes using structured features (funding, revenue, team size, market size, etc.). The task is framed as a multi-class classification problem.
-
-Two models are used:
-- Logistic Regression (baseline)
-- Random Forest (non-linear model)
-
-Both achieve ~74% accuracy. Revenue and user traction are strong predictors. IPO prediction is hardest due to class imbalance.
+## Overview  
+This project uses machine learning to predict whether a startup will fail, get acquired, or go public (IPO). The dataset includes information such as funding, revenue, team size, market size, and other business-related features. This is treated as a multi-class classification problem. Two models are used: Logistic Regression as a simple baseline model and Random Forest as a more advanced model. Both models achieve around 74% accuracy. The results show that financial features like revenue and user traction are the most important for prediction, while predicting IPOs is difficult because there are very few IPO examples in the dataset.
 
 ---
 
 ## Summary of Work Done
 
-### Data
-- **Type:** Tabular (CSV)
-- **Input:** Funding, revenue, team size, market size, sector, investor type, founder background
+### Data  
+- **Type:** Tabular dataset (CSV file)  
+- **Features:** Funding, revenue, team size, market size, sector, investor type, founder background  
+- **Target:** Startup outcome (Failure, Acquisition, IPO)  
+- **Size:** ~100,000 rows  
+- **Split:** 80% training, 20% testing (stratified split)
+
+---
+
+### Preprocessing  
+- Removed duplicate rows  
+- Checked for missing values (none found)  
+- Converted categorical features into numbers  
+- Scaled numerical features  
+- Split data into training and testing sets  
+
+---
+
+### Data Exploration and Visualization  
+- Plotted distributions of numerical features  
+- Compared features across different startup outcomes  
+- Checked class imbalance in the target variable  
+
+**Key insight:** Startups with higher revenue and higher user traction are more likely to succeed.
+
+---
+
+### Problem Setup  
+This is a multi-class classification problem.
+
+- **Input:** Startup features (funding, revenue, etc.)  
 - **Output:** Outcome (Failure, Acquisition, IPO)
-- **Size:** ~100,000 rows
-- **Split:** 80/20 (stratified)
+
+**Models used:**
+- Logistic Regression  
+- Random Forest  
+
+**Settings:**
+- Logistic Regression: `max_iter=5000`  
+- Random Forest: `n_estimators=200`  
 
 ---
 
-### Preprocessing / Clean Up
-- Removed duplicates
-- No missing values found
-- Label Encoding for categorical features
-- StandardScaler for numerical features
-- Train/test split
-- Feature-target separation
+### Training  
+- Built using Python and scikit-learn  
+- Models trained on CPU  
+- Training was fast (only a few seconds)  
+- No complex tuning was required  
 
 ---
 
-### Data Visualization
-- Histograms of numerical features
-- Outcome-based comparisons
-- Categorical distributions
+### Model Performance
 
-**Key Insight:**
-Higher revenue and user traction correlate with successful outcomes.
+| Model               | Accuracy | Precision | Recall | F1 Score |
+|---------------------|----------|-----------|--------|----------|
+| Logistic Regression | ~0.74    | ~0.74     | ~0.74  | ~0.74    |
+| Random Forest       | ~0.73    | ~0.73     | ~0.73  | ~0.73    |
 
----
-
-### Problem Formulation
-- **Input:** Startup features
-- **Output:** Multi-class label
-
-**Models:**
-- Logistic Regression
-- Random Forest
-
-**Hyperparameters:**
-- Logistic Regression: `max_iter=5000`
-- Random Forest: `n_estimators=200`
+Both models perform similarly, with Logistic Regression performing slightly better.
 
 ---
 
-### Training
-- Python (scikit-learn)
-- CPU only
-- Training time: seconds
-- No early stopping needed
+### Conclusions  
+- The models achieve moderate performance (~74% accuracy).  
+- Both models behave very similarly overall.  
+- IPO prediction is the hardest because there are very few IPO examples in the data.  
+- Revenue and user traction are the most important features for predicting startup outcomes.  
+- Financial features are more useful than founder or investor-related features.
 
 ---
 
-### Performance Comparison
-
-**Metrics:**
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-
-| Model | Accuracy | Precision | Recall | F1 |
-|------|--------|---------|-------|----|
-| Logistic Regression | ~0.74 | ~0.74 | ~0.74 | ~0.74 |
-| Random Forest | ~0.73 | ~0.73 | ~0.73 | ~0.73 |
+### Future Improvements  
+- Try better models like XGBoost or Gradient Boosting  
+- Improve handling of class imbalance (especially for IPOs)  
+- Improve feature engineering  
+- Add external data like economic conditions or industry trends  
 
 ---
 
-### Conclusions
-- Moderate predictability of startup outcomes
-- Similar model performance
-- IPO hardest due to imbalance
-- Financial features are most important
+## How to Reproduce Results  
 
----
-
-### Future Work
-- Try XGBoost / Gradient Boosting
-- Handle class imbalance
-- Improve feature engineering
-- Add external economic data
-
----
-
-## How to Reproduce Results
-
-1. Clone the repository
-
-2. Download dataset: https://www.kaggle.com/datasets/dhrubangtalukdar/startup-funding-and-outcome-dataset
-
-3. Place the dataset in a `/data` folder
-
-4. Software Setup (Required libraries to be installed):
-- pandas
-- numpy
-- matplotlib
-- scikit-learn
-- shap
-
+1. Clone the repository  
+2. Download dataset from Kaggle:  
+   https://www.kaggle.com/datasets/dhrubangtalukdar/startup-funding-and-outcome-dataset  
+3. Place dataset in the `/data` folder  
+4. Install required libraries:
+   - pandas  
+   - numpy  
+   - matplotlib  
+   - scikit-learn  
+   - shap  
 5. Run notebooks in order:
-- 1_data_eda.ipynb → Exploratory Data Analysis
-- 2_data_visualizations.ipynb → Visualizations
-- 3_data_preprocessing.ipynb → Data cleaning and preprocessing
-- 4_data_models.ipynb → Model training
-- 5_data_modelevaluations.ipynb → Model evaluation
+   - 1_data_eda.ipynb  
+   - 2_data_visualizations.ipynb  
+   - 3_data_preprocessing.ipynb  
+   - 4_data_models.ipynb  
+   - 5_data_model_evaluations.ipynb
