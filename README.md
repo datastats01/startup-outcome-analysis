@@ -32,9 +32,9 @@ This project uses machine learning to predict whether a startup will fail, get a
 ### Data Exploration and Visualization  
 - Plotted distributions of numerical features
 
-<!---[Data Visualizations](/visualizations/startup_outcome_analysis_numerical_features.png)--->
+<!---[Data Visualizations](/visualizations/startup_outcome_analysis_num_features.png)--->
 <figure>
-<img src="/visualizations/startup_outcome_analysis_numerical_features.png" alt="Numerical Features Histograms">
+<img src="/visualizations/startup_outcome_analysis_num_features.png" alt="Numerical Features Histograms">
 <figcaption> </figcaption>
 </figure>
 
