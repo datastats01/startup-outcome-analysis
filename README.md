@@ -72,6 +72,7 @@ This is a multi-class classification problem.
 
 Both models perform similarly, with Logistic Regression performing slightly better.
 
+<!---[Data Visualizations](/visualizations/startup_outcome_analysis_feature_importance.png)--->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_feature_importance.png" alt="Feature Importance">
 <figcaption> </figcaption>
