@@ -14,7 +14,7 @@ This project uses machine learning to predict whether a startup will fail, get a
 
 ### Data  
 - **Type:** Tabular dataset (CSV file)  
-- **Features:** Funding, revenue (millions), team size, market size (billions), sector, investor type, founder background, founder experience (years), burn rate (millions), product traction users, outcome
+- **Features:** Funding rounds, revenue (millions), team size, market size (billions), sector, investor type, founder background, founder experience (years), burn rate (millions), product traction users, outcome
 - **Target:** Startup outcome (Failure, Acquisition, IPO)  
 - **Size:** ~100,000 rows  
 - **Split:** 80% training, 20% testing (stratified split)
