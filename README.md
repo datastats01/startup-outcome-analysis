@@ -31,8 +31,21 @@ This project uses machine learning to predict whether a startup will fail, get a
 ---
 
 ### Data Exploration and Visualization  
-- Plotted distributions of numerical features  
-- Compared features across different startup outcomes  
+- Plotted distributions of numerical features
+
+<!---[Data Visualizations](/visualizations/startup_outcome_analysis_numerical_features.png)--->
+<figure>
+<img src="/visualizations/startup_outcome_analysis_numerical_features.png" alt="Numerical Features Histograms">
+<figcaption> </figcaption>
+</figure>
+
+- Compared features across different startup outcomes
+<!---[Data Visualizations](/visualizations/startup_outcome_analysis_cat_features.png)--->
+<figure>
+<img src="/visualizations/startup_outcome_analysis_cat_features.png" alt="Categorical Features Histograms">
+<figcaption> </figcaption>
+</figure>
+
 - Checked class imbalance in the target variable  
 
 **Key insight:** Startups with higher revenue and higher user traction are more likely to succeed.
