@@ -72,6 +72,16 @@ This is a multi-class classification problem.
 
 Both models perform similarly, with Logistic Regression performing slightly better.
 
+<figure>
+<img src="/visualizations/startup_outcome_analysis_feature_importance.png" alt="Feature Importance">
+<figcaption> </figcaption>
+</figure>
+
+- Revenue is the most important feature, meaning startups with higher revenue strongly influence predictions.
+- Product traction is the second most important feature, showing user growth matters a lot.
+- Features like founder background and investor type have low importance, meaning they do not strongly affect predictions.
+- Financial and performance-based metrics are more important than categorical features.
+  
 ---
 
 ### Conclusions  
