@@ -41,7 +41,7 @@ This project uses machine learning to predict whether a startup will fail, get a
 - Compared features across different startup outcomes
 <!---[Data Visualizations](/visualizations/startup_outcome_analysis_cat_features.png)--->
 <figure>
-<img src="/visualizations/startup_outcome_analysis_cat_features.png" width = 250 alt="Categorical Features Histograms">
+<img src="/visualizations/startup_outcome_analysis_cat_features.png" alt="Categorical Features Histograms">
 <figcaption> </figcaption>
 </figure>
 
