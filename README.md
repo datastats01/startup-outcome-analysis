@@ -35,7 +35,7 @@ This project predicts whether a startup will fail, get acquired, or go public (I
 </figure>
 
 - **Compared categorical features across startup outcomes**
-  - Climate has the highest number of IPO startups (310), followed by Health (303), with AI having the lowest count in IPO (260).
+ - Climate has the highest number of IPO startups (310), followed by Health (303), with AI having the lowest count in IPO (260).
   - Tier 2 VCs invest in the most startups across all outcomes, while angel investors have the lowest involvement in IPO startups (553).
   - First-time founders have the highest counts for Failure and Acquisition startups, while academic founders have the lowest representation in IPO startups (419).
   - AI and Crypto sectors have fewer IPO startups, while Health, SaaS, and Climate are more represented in the IPO category.
@@ -106,11 +106,10 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 <figcaption> </figcaption>
 </figure>
 
-**Key insights from ROC Curves (IPO Class):**
-- Random Forest shows better classification ability (a little higher AUC compared to Logistic Regression).
-- Logistic Regression performs slightly lower but more consistently.
-- IPO detection remains difficult due to limited data.
-
+- **Key insights from ROC Curves (IPO Class):**
+    - Random Forest shows better classification ability (a little higher AUC compared to Logistic Regression).
+    - Logistic Regression performs slightly lower but more consistently.
+    - IPO detection remains difficult due to limited data.
 
 **Feature Importance Bar Chart**
 <!---[Visualizations](/visualizations/startup_outcome_analysis_feature_importance.png)--->
@@ -119,12 +118,12 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 <figcaption> </figcaption>
 </figure>
 
-**Key insights from Feature Importance Bar Chart:** 
-- Revenue is the most important feature, meaning startups with higher revenue strongly influence predictions.
-- Product traction is the second most important feature, showing user growth matters a lot.
-- Features like founder background and investor type have low importance, meaning they do not strongly affect predictions.
-- Financial and performance-based metrics are more important than categorical features.
-  
+- **Key insights from Feature Importance Bar Chart:** 
+    - Revenue is the most important feature, meaning startups with higher revenue strongly influence predictions.
+    - Product traction is the second most important feature, showing user growth matters a lot.
+    - Features like founder background and investor type have low importance, meaning they do not strongly affect predictions.
+    - Financial and performance-based metrics are more important than categorical features.
+      
 ---
 
 ### Conclusions  
