@@ -56,11 +56,11 @@ This project predicts startup outcomes, specifically whether a startup will fail
     - IPO represents a very small portion of the dataset.
     - This imbalance affects model performance, especially for IPO prediction.
 
-    | Outcome     | Count |
-    |-------------|-------|
-    | Failure     | 22,145 |
-    | Acquisition | 13,141 |
-    | IPO         | 2,952  |
+        | Outcome     | Count |
+        |-------------|-------|
+        | Failure     | 22,145 |
+        | Acquisition | 13,141 |
+        | IPO         | 2,952  |
 
 ---
 
