@@ -46,10 +46,10 @@ This project predicts whether a startup will fail, get acquired, or go public (I
 <figcaption> </figcaption>
 </figure>
 
-- **Checked class imbalance in the target variable**
-The Outcome variable is imbalanced, with more instances of Failure startups than Acquisition or IPO.
-The Failure class has the highest count, indicating most startups in the dataset ended in failure.
-Acquisition and IPO have fewer instances, with IPO being the least represented outcome.
+**Checked class imbalance in the target variable**
+- The Outcome variable is imbalanced, with more instances of Failure startups than Acquisition or IPO.
+- The Failure class has the highest count, indicating most startups in the dataset ended in failure.
+- Acquisition and IPO have fewer instances, with IPO being the least represented outcome.
 
     | Outcome     | Count |
     |-------------|-------|
