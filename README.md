@@ -35,11 +35,11 @@ This project predicts whether a startup will fail, get acquired, or go public (I
 </figure>
 
 - **Compared categorical features across startup outcomes**
- - Climate has the highest number of IPO startups (310), followed by Health (303), with AI having the lowest count in IPO (260).
-  - Tier 2 VCs invest in the most startups across all outcomes, while angel investors have the lowest involvement in IPO startups (553).
-  - First-time founders have the highest counts for Failure and Acquisition startups, while academic founders have the lowest representation in IPO startups (419).
-  - AI and Crypto sectors have fewer IPO startups, while Health, SaaS, and Climate are more represented in the IPO category.
-    
+    - Climate has the highest number of IPO startups (310), followed by Health (303), with AI having the lowest count in IPO (260).
+    - Tier 2 VCs invest in the most startups across all outcomes, while angel investors have the lowest involvement in IPO startups (553).
+    - First-time founders have the highest counts for Failure and Acquisition startups, while academic founders have the lowest representation in   IPO startups (419).
+    - AI and Crypto sectors have fewer IPO startups, while Health, SaaS, and Climate are more represented in the IPO category.
+        
 <!---[Visualizations](/visualizations/startup_outcome_analysis_cat_features.png)--->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_cat_features.png" alt="Categorical Features Histograms">
