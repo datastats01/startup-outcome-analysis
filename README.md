@@ -6,7 +6,7 @@ This project predicts startup outcomes (Failure, Acquisition, or IPO) using Logi
 ---
 
 ## Overview  
-This project predicts whether a startup will fail, get acquired, or go public (IPO). It uses a dataset with features such as funding, revenue, team size, and market size, treated as a multi-class classification problem. Both Logistic Regression and Random Forest models were trained, achieving around 74% accuracy. Financial features like revenue and product traction play a major role in the predictions, while predicting IPOs is more challenging due to class imbalance.
+This project aims to predict startup outcomes, specifically whether a startup will fail, get acquired, or go public (IPO). We use a dataset containing features such as funding, revenue, team size, and market size, treating the task as a multi-class classification problem. Logistic Regression and Random Forest models are trained to predict the startup's future, achieving an accuracy of about 74%. Financial aspects, such as revenue and product traction, are the most influential factors in making predictions. However, predicting IPO outcomes remains challenging due to class imbalance, as IPOs are underrepresented in the dataset.
 
 ---
 
@@ -14,7 +14,7 @@ This project predicts whether a startup will fail, get acquired, or go public (I
 
 ### Data Exploration
 - **Type:** Tabular dataset (CSV file)  
-- **Features:** Funding rounds, revenue (millions), team size, market size (billions), sector, investor type, founder background, founder experience (years), burn rate (millions), product traction (users), outcome
+- **Features:** Funding rounds, revenue (millions), team size, market size (billions), sector, investor type, founder background, founder experience (years), burn rate (millions), product traction (users), outcome  
 - **Target:** Startup outcome (Failure, Acquisition, IPO)  
 - **Size:** ~100,000 rows  
 - **Split:** 80% training, 20% testing (stratified split)
@@ -22,121 +22,130 @@ This project predicts whether a startup will fail, get acquired, or go public (I
 ---
 
 ### Data Visualization  
-- **Plotted distributions of numerical features**
-    - IPO startups have the highest average funding rounds (3.00), founder experience (15.54 years), team size (172.09), and revenue (2.12M USD).
-    - Acquisition startups have moderate values for funding rounds (2.35), founder experience (13.53 years), and team size (159.24).
-    - Failure startups have the lowest funding rounds (1.70), founder experience (10.75 years), team size (143.46), and revenue (536K USD).
-    - Market size and burn rate show little variation across outcomes, with IPO startups having the highest product traction (547K users).
 
-<!---[Visualizations](/visualizations/startup_outcome_analysis_num_features.png)--->
+- **Numerical Feature Distributions**
+    - IPO startups show the highest averages in funding rounds, founder experience, team size, and revenue.
+    - Acquisition startups sit in the middle range across most financial metrics.
+    - Failure startups consistently show the lowest values in revenue and funding.
+    - Market size and burn rate are relatively similar across all classes.
+
+<!-- Numerical Feature Distribution Plot -->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_num_features.png" alt="Numerical Features Histograms">
-<figcaption> </figcaption>
+<figcaption></figcaption>
 </figure>
 
-- **Compared categorical features across startup outcomes**
-    - Climate has the highest number of IPO startups (310), followed by Health (303), with AI having the lowest count in IPO (260).
-    - Tier 2 VCs invest in the most startups across all outcomes, while angel investors have the lowest involvement in IPO startups (553).
-    - First-time founders have the highest counts for Failure and Acquisition startups, while academic founders have the lowest representation in   IPO startups (419).
-    - AI and Crypto sectors have fewer IPO startups, while Health, SaaS, and Climate are more represented in the IPO category.
-        
-<!---[Visualizations](/visualizations/startup_outcome_analysis_cat_features.png)--->
+---
+
+- **Categorical Feature Analysis**
+    - Certain sectors like Health and SaaS show higher IPO representation.
+    - Tier 2 VC funding appears most frequently across all outcomes.
+    - First-time founders are more associated with Failure outcomes.
+    - Founder background has weaker separation power compared to financial features.
+
+<!-- Categorical Feature Plot -->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_cat_features.png" alt="Categorical Features Histograms">
-<figcaption> </figcaption>
+<figcaption></figcaption>
 </figure>
 
-- **Checked class imbalance in the target variable**
-    - The Outcome variable is imbalanced, with more instances of Failure startups than Acquisition or IPO.
-    - The Failure class has the highest count, indicating most startups in the dataset ended in failure.
-    - Acquisition and IPO have fewer instances, with IPO being the least represented outcome.
+---
 
-        | Outcome     | Count |
-        |-------------|-------|
-        | Failure     | 22,145 |
-        | Acquisition | 13,141 |
-        | IPO         | 2,952  |
+- **Class Imbalance Check**
+    - The dataset is imbalanced, with Failure being the dominant class.
+    - IPO represents a very small portion of the dataset.
+    - This imbalance affects model performance, especially for IPO prediction.
+
+| Outcome     | Count |
+|-------------|-------|
+| Failure     | 22,145 |
+| Acquisition | 13,141 |
+| IPO         | 2,952  |
 
 ---
 
 ### Preprocessing  
-- Checked for missing values and duplicate records (none found)  
-- Converted categorical features into numbers  
+- Verified no missing values or duplicates  
+- Encoded categorical variables  
 - Scaled numerical features  
-- Split data into training and testing sets
-  
+- Split dataset into training and testing sets  
+
 ---
+
 ### Problem Setup  
 This is a multi-class classification problem.
 
 - **Input:** Startup features (funding, revenue, etc.)  
-- **Output:** Outcome (Failure, Acquisition, IPO)
+- **Output:** Startup outcome (Failure, Acquisition, IPO)
 
-**Models used:**
+**Models Used:**
 - Logistic Regression  
 - Random Forest  
 
 **Settings:**
 - Logistic Regression: `max_iter=5000`  
-- Random Forest: `n_estimators=200`   
+- Random Forest: `n_estimators=200`  
 
 ---
 
 ### Training  
-- Built using Python and scikit-learn  
+- Implemented using Python and scikit-learn  
 - Models trained on CPU  
-- Training was fast (only a few seconds)  
-- No complex tuning was required  
+- Training completed quickly  
+- Minimal hyperparameter tuning required  
 
 ---
 
 ### Model Performance
 
-| Model               | Accuracy | Precision (weighted) | Recall (weighted) | F1 Score (weighted) | ROC AUC |
-|---------------------|----------|----------------------|-------------------|---------------------|---------|
-| Logistic Regression | 0.7447   | 0.7417               | 0.7447            | 0.7403              | 0.745   |
-| Random Forest       | 0.7362   | 0.7345               | 0.7362            | 0.7291              | 0.786   |
+| Model               | Accuracy  | Precision   | Recall    | F1 Score  | ROC AUC   |
+|---------------------|----------|-------------|-----------|-----------|-----------|
+| Logistic Regression | 0.68575  | 0.721400    | 0.68575   | 0.697992  | 0.845781  |
+| Random Forest       | 0.73620  | 0.734517    | 0.73620   | 0.729080  | 0.859523  |
 
-Both models show similar performance, with Random Forest slightly better at ranking but not at recall.
+---
 
-**ROC Curves (IPO Class)**
-<!---[Visualizations](/visualizations/startup_outcome_analysis_roc_curves.png)--->
+### ROC Curve (IPO Class)
+
+<!-- ROC Curve Plot -->
 <figure>
-<img src="/visualizations/startup_outcome_analysis_roc_curves.png" alt="ROC Curves"> 
-<figcaption> </figcaption>
+<img src="/visualizations/startup_outcome_analysis_roc_curves.png" alt="ROC Curves">
+<figcaption></figcaption>
 </figure>
 
-- **Key insights from ROC Curves (IPO Class):**
-    - Random Forest shows a higher ROC AUC, indicating better overall ranking/separation across classes.
-    - Logistic Regression performs slightly lower but more consistently.
+- Random Forest shows slightly better ranking ability (higher AUC).
+- Logistic Regression performs more consistently but with lower separation power.
 
-**Feature Importance Bar Chart**
-<!---[Visualizations](/visualizations/startup_outcome_analysis_feature_importance.png)--->
+---
+
+### Feature Importance
+
+<!-- Feature Importance Plot -->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_feature_importance.png" alt="Feature Importance">
-<figcaption> </figcaption>
+<figcaption></figcaption>
 </figure>
 
-- **Key insights from Feature Importance Bar Chart:** 
-    - Revenue is the most important feature, meaning startups with higher revenue strongly influence predictions.
-    - Product traction is the second most important feature, showing user growth matters a lot.
-    - Founder background and investor type contribute less to the model compared to financial and usage-based features.
-      
+- Revenue is the strongest predictor of startup outcome.
+- Product traction is the second most important feature.
+- Founder background and investor type have low predictive influence.
+- Financial metrics dominate model decisions overall.
+
 ---
 
 ### Conclusions  
-- The models achieve moderate performance (~74% accuracy).  
-- Both models behave very similarly overall.  
-- IPO prediction is the hardest because there are very few IPO examples in the data.  
-- The results suggest that startup outcomes are primarily driven by measurable financial performance such as revenue and user traction, rather than founder or investor characteristics.
+- Both models achieve moderate performance (~74% accuracy).  
+- Random Forest performs slightly better overall than Logistic Regression.  
+- IPO prediction remains difficult due to severe class imbalance.  
+- Startup outcomes are mainly driven by financial and growth metrics rather than qualitative features.  
 
 ---
 
 ### Future Improvements  
-- Try better models like XGBoost or Gradient Boosting  
-- Improve handling of class imbalance (especially for IPOs)  
-- Improve feature engineering  
-- Add external data like economic conditions or industry trends  
+- Apply oversampling to improve IPO detection  
+- Use XGBoost or LightGBM for better performance  
+- Improve feature engineering (ratios like revenue/burn rate)  
+- Add time-based or external economic features  
 
 ---
 
@@ -145,8 +154,8 @@ Both models show similar performance, with Random Forest slightly better at rank
 1. Clone the repository  
 2. Download dataset from Kaggle:  
    https://www.kaggle.com/datasets/dhrubangtalukdar/startup-funding-and-outcome-dataset  
-3. Place dataset in the `/data` folder  
-4. Install required libraries:
+3. Place dataset in `/data` folder  
+4. Install dependencies:
    - pandas  
    - numpy  
    - matplotlib  
