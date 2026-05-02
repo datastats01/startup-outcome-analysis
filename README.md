@@ -102,7 +102,7 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 ROC Curves (IPO Class)
 Compare model ability to identify IPO outcomes
 
-<!---[Visualizations](/visualizations/startup_outcome_roc_curves.png)--->
+<!---[Visualizations](/visualizations/startup_outcome_analysis_roc_curves.png)--->
 <figure>
 <img src="/visualizations/startup_outcome_roc_curves.png" alt="ROC Curves"> 
 <figcaption> </figcaption>
