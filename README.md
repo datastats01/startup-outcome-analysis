@@ -107,8 +107,8 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 </figure>
 
 **Key insights from ROC Curves (IPO Class):**
-- Random Forest shows stronger classification ability (higher AUC).
-- Logistic Regression performs slightly worse but more consistently.
+- Random Forest shows better classification ability (a little higher AUC compared to Logistic Regression).
+- Logistic Regression performs slightly lower but more consistently.
 - IPO detection remains difficult due to limited data.
 
 
