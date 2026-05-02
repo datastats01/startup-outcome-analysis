@@ -51,6 +51,7 @@ This project predicts whether a startup will fail, get acquired, or go public (I
     - The Failure class has the highest count, indicating most startups in the dataset ended in failure.
     - Acquisition and IPO have fewer instances, with IPO being the least represented outcome.
 
+
     | Outcome     | Count |
     |-------------|-------|
     | Failure     | 22,145 |
