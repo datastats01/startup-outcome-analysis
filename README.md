@@ -14,7 +14,7 @@ This project predicts whether a startup will fail, get acquired, or go public (I
 
 ### Data Exploration
 - **Type:** Tabular dataset (CSV file)  
-- **Features:** Funding rounds, revenue (millions), team size, market size (billions), sector, investor type, founder background, founder experience (years), burn rate (millions), product traction users, outcome
+- **Features:** Funding rounds, revenue (millions), team size, market size (billions), sector, investor type, founder background, founder experience (years), burn rate (millions), product traction (users), outcome
 - **Target:** Startup outcome (Failure, Acquisition, IPO)  
 - **Size:** ~100,000 rows  
 - **Split:** 80% training, 20% testing (stratified split)
@@ -92,12 +92,12 @@ This is a multi-class classification problem.
 
 ### Model Performance
 
-| Model               | Accuracy | Precision | Recall | F1 Score |
-|---------------------|----------|-----------|--------|----------|
-| Logistic Regression | ~0.74    | ~0.74     | ~0.74  | ~0.74    |
-| Random Forest       | ~0.73    | ~0.73     | ~0.73  | ~0.73    |
+| Model               | Accuracy | Precision (weighted) | Recall (weighted) | F1 Score (weighted) | ROC AUC |
+|---------------------|----------|----------------------|-------------------|---------------------|---------|
+| Logistic Regression | 0.7447   | 0.7417               | 0.7447            | 0.7403              | 0.745   |
+| Random Forest       | 0.7362   | 0.7345               | 0.7362            | 0.7291              | 0.786   |
 
-Both models perform similarly, with Logistic Regression performing slightly better.
+Both models show similar performance, with Random Forest slightly better at ranking but not at recall.
 
 **ROC Curves (IPO Class)**
 <!---[Visualizations](/visualizations/startup_outcome_analysis_roc_curves.png)--->
@@ -107,9 +107,8 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 </figure>
 
 - **Key insights from ROC Curves (IPO Class):**
-    - Random Forest shows better classification ability (a little higher AUC compared to Logistic Regression).
+    - Random Forest shows a higher ROC AUC, indicating better overall ranking/separation across classes.
     - Logistic Regression performs slightly lower but more consistently.
-    - IPO detection remains difficult due to limited data.
 
 **Feature Importance Bar Chart**
 <!---[Visualizations](/visualizations/startup_outcome_analysis_feature_importance.png)--->
@@ -121,8 +120,7 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 - **Key insights from Feature Importance Bar Chart:** 
     - Revenue is the most important feature, meaning startups with higher revenue strongly influence predictions.
     - Product traction is the second most important feature, showing user growth matters a lot.
-    - Features like founder background and investor type have low importance, meaning they do not strongly affect predictions.
-    - Financial and performance-based metrics are more important than categorical features.
+    - Founder background and investor type contribute less to the model compared to financial and usage-based features.
       
 ---
 
@@ -130,8 +128,7 @@ Both models perform similarly, with Logistic Regression performing slightly bett
 - The models achieve moderate performance (~74% accuracy).  
 - Both models behave very similarly overall.  
 - IPO prediction is the hardest because there are very few IPO examples in the data.  
-- Revenue and user traction are the most important features for predicting startup outcomes.  
-- Financial features are more useful than founder or investor-related features.
+- The results suggest that startup outcomes are primarily driven by measurable financial performance such as revenue and user traction, rather than founder or investor characteristics.
 
 ---
 
