@@ -99,12 +99,10 @@ This is a multi-class classification problem.
 
 Both models perform similarly, with Logistic Regression performing slightly better.
 
-ROC Curves (IPO Class)
-Compare model ability to identify IPO outcomes
-
+**ROC Curves (IPO Class)**
 <!---[Visualizations](/visualizations/startup_outcome_analysis_roc_curves.png)--->
 <figure>
-<img src="/visualizations/startup_outcome_roc_curves.png" alt="ROC Curves"> 
+<img src="/visualizations/startup_outcome_analysis_roc_curves.png" alt="ROC Curves"> 
 <figcaption> </figcaption>
 </figure>
 
@@ -113,6 +111,8 @@ Compare model ability to identify IPO outcomes
 - Logistic Regression performs slightly worse but more consistently.
 - IPO detection remains difficult due to limited data.
 
+
+**Feature Importance Bar Chart**
 <!---[Visualizations](/visualizations/startup_outcome_analysis_feature_importance.png)--->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_feature_importance.png" alt="Feature Importance">
