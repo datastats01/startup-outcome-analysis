@@ -56,11 +56,11 @@ This project predicts startup outcomes, specifically whether a startup will fail
     - IPO represents a very small portion of the dataset.
     - This imbalance affects model performance, especially for IPO prediction.
 
-| Outcome     | Count |
-|-------------|-------|
-| Failure     | 22,145 |
-| Acquisition | 13,141 |
-| IPO         | 2,952  |
+    | Outcome     | Count |
+    |-------------|-------|
+    | Failure     | 22,145 |
+    | Acquisition | 13,141 |
+    | IPO         | 2,952  |
 
 ---
 
@@ -135,12 +135,13 @@ This is a multi-class classification problem.
 - Financial metrics dominate model decisions overall.
 
 ---
-
+ 
 ### Conclusions  
-- Both models achieve moderate performance (~70–74% accuracy).  
-- Random Forest performs slightly better overall than Logistic Regression.  
-- IPO prediction remains difficult due to severe class imbalance.  
-- Startup outcomes are mainly driven by financial and growth metrics rather than qualitative features.  
+- Both models achieve moderate predictive performance, with Random Forest outperforming Logistic Regression (73.6% vs. 68.6% accuracy).  
+- Model performance is largely driven by financial and usage-based features such as revenue and product traction.  
+- Logistic Regression provides more balanced but weaker overall predictive performance compared to Random Forest.  
+- IPO prediction remains the most difficult class to model due to severe class imbalance and limited representation in the dataset.  
+- Overall, startup outcomes appear to be strongly influenced by measurable business performance metrics rather than qualitative factors such as founder background or investor type.  
 
 ---
 
