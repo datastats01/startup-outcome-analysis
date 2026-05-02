@@ -28,7 +28,7 @@ This project predicts whether a startup will fail, get acquired, or go public (I
     - Failure startups have the lowest funding rounds (1.70), founder experience (10.75 years), team size (143.46), and revenue (536K USD).
     - Market size and burn rate show little variation across outcomes, with IPO startups having the highest product traction (547K users).
 
-<!---[Data Visualizations](/visualizations/startup_outcome_analysis_num_features.png)--->
+<!---[Visualizations](/visualizations/startup_outcome_analysis_num_features.png)--->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_num_features.png" alt="Numerical Features Histograms">
 <figcaption> </figcaption>
@@ -40,7 +40,7 @@ This project predicts whether a startup will fail, get acquired, or go public (I
   - First-time founders have the highest counts for Failure and Acquisition startups, while academic founders have the lowest representation in IPO startups (419).
   - AI and Crypto sectors have fewer IPO startups, while Health, SaaS, and Climate are more represented in the IPO category.
     
-<!---[Data Visualizations](/visualizations/startup_outcome_analysis_cat_features.png)--->
+<!---[Visualizations](/visualizations/startup_outcome_analysis_cat_features.png)--->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_cat_features.png" alt="Categorical Features Histograms">
 <figcaption> </figcaption>
@@ -99,13 +99,27 @@ This is a multi-class classification problem.
 
 Both models perform similarly, with Logistic Regression performing slightly better.
 
-<!---[Data Visualizations](/visualizations/startup_outcome_analysis_feature_importance.png)--->
+ROC Curves (IPO Class)
+Compare model ability to identify IPO outcomes
+
+<!---[Visualizations](/visualizations/startup_outcome_roc_curves.png)--->
+<figure>
+<img src="/visualizations/startup_outcome_roc_curves.png" alt="ROC Curves"> 
+<figcaption> </figcaption>
+</figure>
+
+**Key insights from ROC Curves (IPO Class):**
+- Random Forest shows stronger classification ability (higher AUC).
+- Logistic Regression performs slightly worse but more consistently.
+- IPO detection remains difficult due to limited data.
+
+<!---[Visualizations](/visualizations/startup_outcome_analysis_feature_importance.png)--->
 <figure>
 <img src="/visualizations/startup_outcome_analysis_feature_importance.png" alt="Feature Importance">
 <figcaption> </figcaption>
 </figure>
 
-**Key insights:** 
+**Key insights from Feature Importance Bar Chart:** 
 - Revenue is the most important feature, meaning startups with higher revenue strongly influence predictions.
 - Product traction is the second most important feature, showing user growth matters a lot.
 - Features like founder background and investor type have low importance, meaning they do not strongly affect predictions.
