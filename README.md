@@ -6,7 +6,7 @@ This project predicts startup outcomes (Failure, Acquisition, or IPO) using Logi
 ---
 
 ## Overview  
-This project aims to predict startup outcomes, specifically whether a startup will fail, get acquired, or go public (IPO). We use a dataset containing features such as funding, revenue, team size, and market size, treating the task as a multi-class classification problem. Logistic Regression and Random Forest models are trained to predict the startup's future, achieving an accuracy of about 74%. Financial aspects, such as revenue and product traction, are the most influential factors in making predictions. However, predicting IPO outcomes remains challenging due to class imbalance, as IPOs are underrepresented in the dataset.
+This project aims to predict startup outcomes, specifically whether a startup will fail, get acquired, or go public (IPO). We use a dataset containing features such as funding, revenue, team size, and market size, treating the task as a multi-class classification problem. Logistic Regression and Random Forest models are trained to predict the startup's future, with Random Forest achieving an accuracy of about 73.6%, and Logistic Regression at 68.6%. Financial aspects, such as revenue and product traction, are the most influential factors in making predictions. However, predicting IPO outcomes remains challenging due to class imbalance, as IPOs are underrepresented in the dataset.
 
 ---
 
@@ -103,6 +103,9 @@ This is a multi-class classification problem.
 | Logistic Regression | 0.68575  | 0.721400    | 0.68575   | 0.697992  | 0.845781  |
 | Random Forest       | 0.73620  | 0.734517    | 0.73620   | 0.729080  | 0.859523  |
 
+- **Logistic Regression** achieves an accuracy of **68.6%**.
+- **Random Forest** achieves an accuracy of **73.6%**, slightly outperforming Logistic Regression in all metrics except for recall.
+
 ---
 
 ### ROC Curve (IPO Class)
@@ -134,7 +137,7 @@ This is a multi-class classification problem.
 ---
 
 ### Conclusions  
-- Both models achieve moderate performance (~74% accuracy).  
+- Both models achieve moderate performance (~70–74% accuracy).  
 - Random Forest performs slightly better overall than Logistic Regression.  
 - IPO prediction remains difficult due to severe class imbalance.  
 - Startup outcomes are mainly driven by financial and growth metrics rather than qualitative features.  
