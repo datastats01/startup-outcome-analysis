@@ -156,8 +156,8 @@ Both models perform similarly, with Logistic Regression performing slightly bett
    - scikit-learn  
    - shap  
 5. Run notebooks in order:
-   - 1_data_eda.ipynb  
-   - 2_data_visualizations.ipynb  
-   - 3_data_preprocessing.ipynb  
-   - 4_data_models.ipynb  
-   - 5_data_model_evaluations.ipynb
+   - 1_data_eda.ipynb -> exploratory data analysis 
+   - 2_data_visualizations.ipynb -> data visualizations based on original dataset
+   - 3_data_preprocessing.ipynb -> data preprocessing for machine learning
+   - 4_data_models.ipynb -> machine learning models based on data
+   - 5_data_model_evaluations.ipynb -> in-depth evaluation on models and charts
